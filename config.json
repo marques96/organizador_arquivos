@@ -1,0 +1,10 @@
+{
+    "rules": {
+        "Documentos": [".pdf", ".docx", ".csv", ".txt"],
+        "Imagens": [".jpg", ".jpeg", ".png", ".gif"],
+        "Áudios": [".mp3", ".wav", ".ogg"],
+        "Vídeos": [".mp4", ".mkv"],
+        "Compactados": [".zip", ".rar"]
+    },
+    "default_folder": "Outros"
+}
