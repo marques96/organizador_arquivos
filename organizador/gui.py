@@ -37,36 +37,65 @@ class OrganizadorGUI:
         style.configure("TLabel", font=("Segoe UI", 10), background="#f7f9fc")
 
         # Cabeçalho
-        header = tk.Label(master, text="📂 Organizador de Arquivos", font=("Segoe UI", 16, "bold"), bg="#f7f9fc", fg="#2c3e50")
+        header = tk.Label(
+            master,
+            text="📂 Organizador de Arquivos",
+            font=("Segoe UI", 16, "bold"),
+            bg="#f7f9fc",
+            fg="#2c3e50",
+        )
         header.pack(pady=10)
 
         # Seletor de pasta
         frame_path = tk.Frame(master, bg="#f7f9fc")
         frame_path.pack(pady=5)
-        tk.Label(frame_path, text="Diretório alvo:", font=("Segoe UI", 10), bg="#f7f9fc").pack(side="left", padx=5)
+        tk.Label(
+            frame_path, text="Diretório alvo:", font=("Segoe UI", 10), bg="#f7f9fc"
+        ).pack(side="left", padx=5)
         self.entry_path = tk.Entry(frame_path, width=60, font=("Segoe UI", 10))
         self.entry_path.pack(side="left", padx=5)
-        ttk.Button(frame_path, text="📁 Escolher", command=self.escolher_pasta).pack(side="left")
+        ttk.Button(frame_path, text="📁 Escolher", command=self.escolher_pasta).pack(
+            side="left"
+        )
 
         # Botões de ação
         frame_buttons = tk.Frame(master, bg="#f7f9fc")
         frame_buttons.pack(pady=10)
-        self.btn_organizar = ttk.Button(frame_buttons, text="⚡ Organizar (Manual)", command=self.iniciar_organizacao)
+        self.btn_organizar = ttk.Button(
+            frame_buttons,
+            text="⚡ Organizar (Manual)",
+            command=self.iniciar_organizacao,
+        )
         self.btn_organizar.grid(row=0, column=0, padx=10)
-        self.btn_watch = ttk.Button(frame_buttons, text="👀 Iniciar Monitoramento", command=self.iniciar_monitoramento)
+        self.btn_watch = ttk.Button(
+            frame_buttons,
+            text="👀 Iniciar Monitoramento",
+            command=self.iniciar_monitoramento,
+        )
         self.btn_watch.grid(row=0, column=1, padx=10)
-        self.btn_stop = ttk.Button(frame_buttons, text="🛑 Parar Monitoramento", command=self.parar_monitoramento, state="disabled")
+        self.btn_stop = ttk.Button(
+            frame_buttons,
+            text="🛑 Parar Monitoramento",
+            command=self.parar_monitoramento,
+            state="disabled",
+        )
         self.btn_stop.grid(row=0, column=2, padx=10)
 
         # Barra de progresso
-        tk.Label(master, text="Progresso:", font=("Segoe UI", 10, "bold"), bg="#f7f9fc").pack()
+        tk.Label(
+            master, text="Progresso:", font=("Segoe UI", 10, "bold"), bg="#f7f9fc"
+        ).pack()
         self.progress = tk.DoubleVar()
         self.progress_bar = ttk.Progressbar(master, maximum=100, variable=self.progress)
         self.progress_bar.pack(fill="x", padx=20, pady=5)
 
         # Área de logs
-        tk.Label(master, text="Atividades:", font=("Segoe UI", 10, "bold"), bg="#f7f9fc").pack()
-        self.log_area = scrolledtext.ScrolledText(master, width=90, height=15, state="disabled", font=("Consolas", 9))
+        tk.Label(
+            master, text="Atividades:", font=("Segoe UI", 10, "bold"), bg="#f7f9fc"
+        ).pack()
+        self.log_area = scrolledtext.ScrolledText(
+            master, width=90, height=15, state="disabled", font=("Consolas", 9)
+        )
         self.log_area.pack(padx=20, pady=10)
 
         self.observer = None
@@ -99,15 +128,28 @@ class OrganizadorGUI:
     def organizar_arquivos(self, path):
         self.disable_buttons()
         self.organizador = Organizador(path)
+
         arquivos = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
-        total = len(arquivos) if arquivos else 1
+
+        total = len(arquivos)
+        if total == 0:
+            self.log("⚠️ Nenhum arquivo encontrado para organizar.")
+            messagebox.showinfo("Aviso", "Nenhum arquivo encontrado na pasta selecionada.")
+            self.enable_buttons()
+            return
+
+        movidos_local = 0
         for arquivo in arquivos:
             caminho_arquivo = os.path.join(path, arquivo)
             self.organizador._mover_arquivo(caminho_arquivo)
+            movidos_local += 1
             self.log(f"✅ Movido: {arquivo}")
-            self.update_progress((self.organizador.movidos / total) * 100)
-        self.log(f"🎉 Organização concluída! {self.organizador.movidos} arquivo(s) movido(s).")
-        messagebox.showinfo("Concluído", f"Organização finalizada.\nArquivos movidos: {self.organizador.movidos}")
+            self.update_progress((movidos_local / total) * 100)
+
+        self.log(f"🎉 Organização concluída! {movidos_local} arquivo(s) movido(s).")
+        messagebox.showinfo(
+        "Concluído", f"Organização finalizada.\nArquivos movidos: {movidos_local}"
+        )
         self.enable_buttons()
         self.progress.set(0)
 
@@ -138,8 +180,13 @@ class OrganizadorGUI:
             self.observer.join()
             self.observer = None
             total_movidos = self.organizador.movidos if self.organizador else 0
-            self.log(f"🛑 Monitoramento parado. Total de arquivos movidos: {total_movidos}")
-            messagebox.showinfo("Parado", f"Monitoramento interrompido.\nArquivos movidos: {total_movidos}")
+            self.log(
+                f"🛑 Monitoramento parado. Total de arquivos movidos: {total_movidos}"
+            )
+            messagebox.showinfo(
+                "Parado",
+                f"Monitoramento interrompido.\nArquivos movidos: {total_movidos}",
+            )
             self.btn_stop.config(state="disabled")
             self.enable_buttons()
 
