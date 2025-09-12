@@ -30,7 +30,17 @@ Ele suporta:
 
 ## ⚙️ Instalação
 
-1. Clone o repositório:
+1️⃣ Clone o repositório:
 
 ```bash
 git clone https://github.com/marques96/organizador_arquivos
+```
+
+2️⃣ Criar o ambiente virtual e instalar dependências
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux / Mac
+venv\Scripts\activate      # Windows
+
+pip install -r requirements.txt
