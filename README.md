@@ -1,54 +1,25 @@
-# 📂 Organizador de Arquivos em Python
+# 📂 Organizador de Arquivos
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Ativo-success)
-![Contribuições](https://img.shields.io/badge/Contribuições-Bem%20vindas-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Watchdog](https://img.shields.io/badge/Watchdog-monitoring-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-Um script em **Python** para organizar automaticamente os arquivos de uma pasta, movendo-os para subpastas de acordo com suas extensões ou categorias definidas em um arquivo de configuração.  
+## 💡 Descrição
 
-✨ Ideal para manter pastas como **Downloads** sempre limpas e organizadas!  
+O **Organizador de Arquivos** é um script em Python que organiza automaticamente arquivos em pastas baseadas em suas extensões.  
+Ele suporta:
 
----
-
-## 🚀 Funcionalidades
-
-✅ Organiza arquivos automaticamente por **tipo/ extensão**  
-✅ Cria subpastas automaticamente, se ainda não existirem  
-✅ Possui um **arquivo de configuração (`config.json`)** personalizável  
-✅ Dois modos de execução:  
-   - 🔹 **Manual** → organiza uma vez  
-   - 🔹 **Monitoramento em tempo real** → organiza automaticamente sempre que novos arquivos aparecem  
-✅ Gera um arquivo de **log (`logs/app.log`)** com todas as movimentações  
-✅ Estrutura modular e orientada a objetos (**POO**)  
+- Organização manual de arquivos já existentes.  
+- Monitoramento em tempo real de novos arquivos usando `watchdog`.  
+- Configuração personalizada via `config.json`.  
+- Tratamento de arquivos em uso no Windows, com retry e verificação de transferência concluída.  
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ⚙️ Instalação
 
-- 🐍 [Python 3.10+](https://www.python.org/)  
-- 👀 [watchdog](https://pypi.org/project/watchdog/) → monitoramento em tempo real  
-- 📦 `os`, `shutil`, `logging`, `argparse`, `json` (bibliotecas padrão do Python)  
-
----
-
-## 📂 Estrutura do Projeto
+1. Clone o repositório:
 
 ```bash
-organizador_arquivos/
-│── main.py                 # Ponto de entrada
-│── config.json             # Arquivo de configuração
-│── requirements.txt        # Dependências do projeto
-│── README.md               # Documentação
-│
-├── organizador/
-│   ├── __init__.py
-│   ├── core.py             # Lógica principal
-│   ├── watcher.py          # Monitoramento em tempo real
-│   ├── utils.py            # Funções auxiliares
-│
-├── logs/
-│   └── app.log             # Arquivo de log
-│
-└── tests/
-    └── test_core.py        # Testes unitários
+git clone https://github.com/seu-usuario/organizador-arquivos.git
+cd organizador-arquivos

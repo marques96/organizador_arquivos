@@ -1,0 +1,56 @@
+2025-09-12 09:26:29,035 - INFO - Nenhum arquivo encontrado no diretório.
+2025-09-12 10:04:19,396 - INFO - Nenhum arquivo encontrado no diretório.
+2025-09-12 10:05:18,188 - INFO - 9 arquivo(s) encontrados no diretório C:/Users/ABC Concentrados/Downloads/Teste.
+2025-09-12 10:05:18,189 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Artigo  Object Calisthenics- One Dot per Line e Don’t Abbreviate.docx -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:05:18,190 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Cisco Introducion to Cybersecurity.pdf -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:05:18,190 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Insomnia.Core-11.2.0.exe -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:05:18,191 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Install_PCIE_Win11_11026_20_07222025.zip -> C:/Users/ABC Concentrados/Downloads/Teste\Compactados
+2025-09-12 10:05:18,191 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\mongodb-windows-x86_64-8.0.11-signed.msi -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:05:18,192 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\ocorrencia 29042025.mp4 -> C:/Users/ABC Concentrados/Downloads/Teste\Vídeos
+2025-09-12 10:05:18,193 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES julho.xlsx -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:05:18,193 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES maio.xlsx -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:05:18,194 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\ventoy-1.1.07-windows.zip -> C:/Users/ABC Concentrados/Downloads/Teste\Compactados
+2025-09-12 10:05:18,195 - INFO - Organização concluída! 9 arquivo(s) movido(s).
+2025-09-12 10:09:08,879 - INFO - 1 arquivo(s) encontrados no diretório C:/Users/ABC Concentrados/Downloads/Teste.
+2025-09-12 10:09:08,907 - ERROR - Erro ao mover arquivo C:/Users/ABC Concentrados/Downloads/Teste\TLCL-24.11.pdf: [WinError 32] O arquivo já está sendo usado por outro processo
+2025-09-12 10:09:08,907 - INFO - Organização concluída! 0 arquivo(s) movido(s).
+2025-09-12 10:10:03,761 - INFO - 1 arquivo(s) encontrados no diretório C:/Users/ABC Concentrados/Downloads/Teste.
+2025-09-12 10:10:03,762 - ERROR - Erro ao mover arquivo C:/Users/ABC Concentrados/Downloads/Teste\Logo_ABC_invertido.png: [WinError 32] O arquivo já está sendo usado por outro processo
+2025-09-12 10:10:03,762 - INFO - Organização concluída! 0 arquivo(s) movido(s).
+2025-09-12 10:11:17,242 - INFO - 1 arquivo(s) encontrados no diretório C:/Users/ABC Concentrados/Downloads/Teste.
+2025-09-12 10:11:17,242 - ERROR - Erro ao mover arquivo C:/Users/ABC Concentrados/Downloads/Teste\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES julho.xlsx: [WinError 32] O arquivo já está sendo usado por outro processo
+2025-09-12 10:11:17,243 - INFO - Organização concluída! 0 arquivo(s) movido(s).
+2025-09-12 10:29:26,065 - INFO - Nenhum arquivo encontrado no diretório.
+2025-09-12 10:29:58,119 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES julho.xlsx -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:31:29,525 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES julho.xlsx -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:34:08,784 - INFO - 10 arquivo(s) encontrados no diretório C:/Users/ABC Concentrados/Downloads/Teste.
+2025-09-12 10:34:09,786 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\1-modelo-capa-abnt.docx -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:34:10,789 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Folha de Pagamento THOLOR.pdf -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:34:11,792 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Microsoft PowerToys Installer.exe -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:34:12,796 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\npcap-1.79.exe -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:34:13,799 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\ORCAMENTO RELOGIO DIMEP.pdf -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:34:14,802 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Proxy Tholor C.xlsx -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:34:15,806 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES abril.xlsx -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:34:16,807 - ERROR - Erro ao mover arquivo C:/Users/ABC Concentrados/Downloads/Teste\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES julho.xlsx: Destination path 'C:/Users/ABC Concentrados/Downloads/Teste\Documentos\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES julho.xlsx' already exists
+2025-09-12 10:34:17,811 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Tipos de pesquisa cientifica.docx -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:34:18,814 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\ventoy-1.1.07-windows.zip -> C:/Users/ABC Concentrados/Downloads/Teste\Compactados
+2025-09-12 10:34:18,816 - INFO - Organização concluída! 9 arquivo(s) movido(s).
+2025-09-12 10:39:05,346 - INFO - 11 arquivo(s) encontrados no diretório C:/Users/ABC Concentrados/Downloads/Teste.
+2025-09-12 10:39:06,348 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Artigo  Object Calisthenics- One Dot per Line e Don’t Abbreviate.docx -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:39:07,352 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Cisco Introducion to Cybersecurity.pdf -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:39:08,356 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\CV_Matheus Marques.pdf -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:39:09,358 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Insomnia.Core-11.2.0.exe -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:39:10,360 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\Microsoft PowerToys Installer.exe -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:39:11,365 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\ocorrencia 29042025.mp4 -> C:/Users/ABC Concentrados/Downloads/Teste\Vídeos
+2025-09-12 10:39:12,368 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\ORCAMENTO RELOGIO DIMEP.pdf -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:39:13,372 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES abril.xlsx -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:39:14,375 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\R.SGQ.30 - ATA DE REUNIÃO MENSAL ENTRE SETORES maio.xlsx -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:39:15,377 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\ui ux songsterr.jpeg -> C:/Users/ABC Concentrados/Downloads/Teste\Imagens
+2025-09-12 10:39:16,380 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\ventoy-1.1.07-windows.zip -> C:/Users/ABC Concentrados/Downloads/Teste\Compactados
+2025-09-12 10:39:16,381 - INFO - Organização concluída! 11 arquivo(s) movido(s).
+2025-09-12 10:39:32,460 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\TLCL-24.11.pdf -> C:/Users/ABC Concentrados/Downloads/Teste\Documentos
+2025-09-12 10:39:57,419 - WARNING - Não foi possível mover C:/Users/ABC Concentrados/Downloads/Teste\mongodb-windows-x86_64-8.0.11-signed.msi após 5 tentativas.
+2025-09-12 10:40:57,367 - INFO - Nenhum arquivo encontrado no diretório.
+2025-09-12 10:41:10,689 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\mongodb-windows-x86_64-8.0.11-signed.msi -> C:/Users/ABC Concentrados/Downloads/Teste\Outros
+2025-09-12 10:44:46,341 - INFO - Arquivo movido: C:/Users/ABC Concentrados/Downloads/Teste\food3.rar -> C:/Users/ABC Concentrados/Downloads/Teste\Compactados
+2025-09-12 10:45:31,028 - INFO - Nenhum arquivo encontrado no diretório.

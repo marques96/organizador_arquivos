@@ -1,31 +1,38 @@
+import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-import time
-from .core import Organizador
+from organizador.core import Organizador
 
 
-class Handler(FileSystemEventHandler):
-    def __init__(self, path):
-        self.organizador = Organizador(path)
+class WatcherHandler(FileSystemEventHandler):
+    def __init__(self, organizador: Organizador):
+        self.organizador = organizador
 
     def on_created(self, event):
-        if not event.is_directory:
-            self.organizador.organizar()
+        # Ignora diretórios
+        if event.is_directory:
+            return
+        # Pequeno delay para garantir que o arquivo começou a ser copiado
+        time.sleep(0.5)
+        self.organizador._mover_arquivo(event.src_path)
 
 
-class Monitor:
-    def __init__(self, path):
-        self.path = path
-        self.observer = Observer()
+def iniciar_watcher(path: str):
+    organizador = Organizador(path)
 
-    def start(self):
-        event_handler = Handler(self.path)
-        self.observer.schedule(event_handler, self.path, recursive=False)
-        self.observer.start()
-        print(f"Monitorando a pasta: {self.path}")
-        try:
-            while True:
-                time.sleep(1)
-        except KeyboardInterrupt:
-            self.observer.stop()
-        self.observer.join()
+    # 1️⃣ Scan inicial para organizar arquivos já existentes
+    organizador.organizar()
+
+    # 2️⃣ Inicia monitoramento
+    event_handler = WatcherHandler(organizador)
+    observer = Observer()
+    observer.schedule(event_handler, path, recursive=False)
+    observer.start()
+    print(f"\n👀 Monitorando a pasta: {path}\nPressione Ctrl+C para parar.\n")
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+        print("\n🛑 Monitoramento interrompido pelo usuário.")
+    observer.join()
