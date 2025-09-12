@@ -21,5 +21,4 @@ Ele suporta:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/organizador-arquivos.git
-cd organizador-arquivos
+git clone https://github.com/marques96/organizador_arquivos
