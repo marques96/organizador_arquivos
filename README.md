@@ -17,6 +17,17 @@ Ele suporta:
 
 ---
 
+## 🚀 Funcionalidades
+
+- Organiza arquivos automaticamente por tipo/ extensão.
+- Cria subpastas automaticamente, se ainda não existirem.
+- Possui um arquivo de configuração (config.json) para personalizar as regras.
+- Dois modos de execução:
+- Manual → organiza uma vez.
+- Monitoramento em tempo real → organiza automaticamente sempre que novos arquivos aparecem.
+- Gera um arquivo de log (logs/app.log) com todas as movimentações.
+- Estrutura modular e orientada a objetos (POO).
+
 ## ⚙️ Instalação
 
 1. Clone o repositório:
