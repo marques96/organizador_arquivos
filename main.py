@@ -1,20 +1,16 @@
-import argparse
-from organizador.core import Organizador
-from organizador.watcher import iniciar_watcher
+import tkinter as tk
+from organizador.gui import OrganizadorGUI
 
 def main():
-    parser = argparse.ArgumentParser(description="Organizador de arquivos")
-    parser.add_argument("-p", "--path", required=True, help="Caminho da pasta a organizar")
-    parser.add_argument("-w", "--watch", action="store_true", help="Monitorar a pasta em tempo real")
-    args = parser.parse_args()
+    root = tk.Tk()
+    app = OrganizadorGUI(root)
 
-    if args.watch:
-        # Organiza arquivos existentes + monitora novos
-        iniciar_watcher(args.path)
-    else:
-        # Apenas organiza arquivos existentes uma vez
-        organizador = Organizador(args.path)
-        organizador.organizar()
+    # Intercepta o fechamento da janela para parar o watchdog
+    def on_closing():
+        app.fechar_app()
+
+    root.protocol("WM_DELETE_WINDOW", on_closing)
+    root.mainloop()
 
 if __name__ == "__main__":
     main()
