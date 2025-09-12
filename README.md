@@ -1,4 +1,4 @@
-# 📂 Organizador de Arquivos
+# 📂 Organizador de Arquivos em Python
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Watchdog](https://img.shields.io/badge/Watchdog-monitoring-green)
@@ -6,7 +6,8 @@
 
 ## 💡 Descrição
 
-O **Organizador de Arquivos** é um script em Python que organiza automaticamente arquivos em pastas baseadas em suas extensões.  
+Desenvolvi este script em Python que organiza automaticamente arquivos em pastas baseadas em suas extensões a qual utilizei um arquivo JSON para indentificar as extensões.  
+
 Ele suporta:
 
 - Organização manual de arquivos já existentes.  
