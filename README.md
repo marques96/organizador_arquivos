@@ -32,7 +32,7 @@ Ele suporta:
 
 1️⃣ Clone o repositório:
 
-```terminal
+```bash
 git clone https://github.com/marques96/organizador_arquivos
 ```
 
