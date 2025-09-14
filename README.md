@@ -46,12 +46,7 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 ```
 
-3️⃣ Executar em modo manual
+3️⃣ Executando o programa
 ```bash
-python main.py -p "C:/Users/SeuUsuario/Downloads"
-```
-
-4️⃣ Executar em modo monitoramento
-```bash
-python main.py -p "C:/Users/SeuUsuario/Downloads" -w
+python main.py
 ```
