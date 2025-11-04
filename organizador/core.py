@@ -33,18 +33,18 @@ class Organizador:
         arquivos = [f for f in os.listdir(self.path) if os.path.isfile(os.path.join(self.path, f))]
 
         if not arquivos:
-            print("📂 Nenhum arquivo encontrado no diretório.")
+            print("Nenhum arquivo encontrado no diretório.")
             logging.info("Nenhum arquivo encontrado no diretório.")
             return
 
-        print(f"🔎 Encontrados {len(arquivos)} arquivo(s) no diretório. Iniciando organização...\n")
+        print(f"Encontrados {len(arquivos)} arquivo(s) no diretório. Iniciando organização...\n")
         logging.info(f"{len(arquivos)} arquivo(s) encontrados no diretório {self.path}.")
 
         for arquivo in arquivos:
             caminho_arquivo = os.path.join(self.path, arquivo)
             self._mover_arquivo(caminho_arquivo)
 
-        print(f"\n✅ Organização concluída! {self.movidos} arquivo(s) movido(s).")
+        print(f"\nOrganização concluída! {self.movidos} arquivo(s) movido(s).")
         logging.info(f"Organização concluída! {self.movidos} arquivo(s) movido(s).")
 
     def _arquivo_pronto(self, caminho_arquivo: str, tentativas=3, intervalo=1) -> bool:
@@ -66,7 +66,7 @@ class Organizador:
 
         # Verifica se o arquivo está pronto
         if not self._arquivo_pronto(caminho_arquivo):
-            print(f"⚠️  Arquivo ainda está sendo transferido: {nome_arquivo}")
+            print(f"Arquivo ainda está sendo transferido: {nome_arquivo}")
             logging.warning(f"Arquivo ainda está sendo transferido: {caminho_arquivo}")
             return
 
@@ -74,7 +74,7 @@ class Organizador:
         tentativas = 5
         for i in range(tentativas):
             try:
-                print(f"➡️  Movendo arquivo: {nome_arquivo} -> {pasta_completa}")
+                print(f"Movendo arquivo: {nome_arquivo} -> {pasta_completa}")
                 shutil.move(caminho_arquivo, pasta_completa)
                 self.movidos += 1
                 logging.info(f"Arquivo movido: {caminho_arquivo} -> {pasta_completa}")
@@ -83,10 +83,10 @@ class Organizador:
                 time.sleep(5)  # espera 5 segundos e tenta de novo
             except Exception as e:
                 logging.error(f"Erro ao mover arquivo {caminho_arquivo}: {e}")
-                print(f"❌ Erro ao mover {nome_arquivo}: {e}")
+                print(f"Erro ao mover {nome_arquivo}: {e}")
                 break
         else:
-            print(f"❌ Não foi possível mover {nome_arquivo} após {tentativas} tentativas.")
+            print(f"Não foi possível mover {nome_arquivo} após {tentativas} tentativas.")
             logging.warning(f"Não foi possível mover {caminho_arquivo} após {tentativas} tentativas.")
 
     def _definir_pasta(self, extensao: str) -> str:

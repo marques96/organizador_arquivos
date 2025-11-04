@@ -18,7 +18,7 @@ class WatcherHandler(FileSystemEventHandler):
             return
         time.sleep(0.5)
         self.organizador._mover_arquivo(event.src_path)
-        self.log_callback(f"📂 Novo arquivo movido: {os.path.basename(event.src_path)}")
+        self.log_callback(f"Novo arquivo movido: {os.path.basename(event.src_path)}")
         total = self.organizador.movidos or 1
         self.progress_callback((self.organizador.movidos / total) * 100)
 
@@ -26,7 +26,7 @@ class WatcherHandler(FileSystemEventHandler):
 class OrganizadorGUI:
     def __init__(self, master):
         self.master = master
-        master.title("📦 Organizador de Arquivos")
+        master.title("Organizador de Arquivos")
         master.geometry("800x500")
         master.configure(bg="#f7f9fc")
         master.resizable(False, False)
@@ -39,7 +39,7 @@ class OrganizadorGUI:
         # Cabeçalho
         header = tk.Label(
             master,
-            text="📂 Organizador de Arquivos",
+            text="Organizador de Arquivos",
             font=("Segoe UI", 16, "bold"),
             bg="#f7f9fc",
             fg="#2c3e50",
@@ -54,7 +54,7 @@ class OrganizadorGUI:
         ).pack(side="left", padx=5)
         self.entry_path = tk.Entry(frame_path, width=60, font=("Segoe UI", 10))
         self.entry_path.pack(side="left", padx=5)
-        ttk.Button(frame_path, text="📁 Escolher", command=self.escolher_pasta).pack(
+        ttk.Button(frame_path, text="Escolher", command=self.escolher_pasta).pack(
             side="left"
         )
 
@@ -63,19 +63,19 @@ class OrganizadorGUI:
         frame_buttons.pack(pady=10)
         self.btn_organizar = ttk.Button(
             frame_buttons,
-            text="⚡ Organizar (Manual)",
+            text="Organizar (Manual)",
             command=self.iniciar_organizacao,
         )
         self.btn_organizar.grid(row=0, column=0, padx=10)
         self.btn_watch = ttk.Button(
             frame_buttons,
-            text="👀 Iniciar Monitoramento",
+            text="Iniciar Monitoramento",
             command=self.iniciar_monitoramento,
         )
         self.btn_watch.grid(row=0, column=1, padx=10)
         self.btn_stop = ttk.Button(
             frame_buttons,
-            text="🛑 Parar Monitoramento",
+            text="Parar Monitoramento",
             command=self.parar_monitoramento,
             state="disabled",
         )
@@ -121,7 +121,7 @@ class OrganizadorGUI:
     def iniciar_organizacao(self):
         path = self.entry_path.get()
         if not path:
-            messagebox.showwarning("⚠️ Atenção", "Selecione uma pasta primeiro!")
+            messagebox.showwarning("Atenção", "Selecione uma pasta primeiro!")
             return
         Thread(target=self.organizar_arquivos, args=(path,), daemon=True).start()
 
@@ -133,7 +133,7 @@ class OrganizadorGUI:
 
         total = len(arquivos)
         if total == 0:
-            self.log("⚠️ Nenhum arquivo encontrado para organizar.")
+            self.log("Nenhum arquivo encontrado para organizar.")
             messagebox.showinfo("Aviso", "Nenhum arquivo encontrado na pasta selecionada.")
             self.enable_buttons()
             return
@@ -143,7 +143,7 @@ class OrganizadorGUI:
             caminho_arquivo = os.path.join(path, arquivo)
             self.organizador._mover_arquivo(caminho_arquivo)
             movidos_local += 1
-            self.log(f"✅ Movido: {arquivo}")
+            self.log(f"Movido: {arquivo}")
             self.update_progress((movidos_local / total) * 100)
 
         self.log(f"🎉 Organização concluída! {movidos_local} arquivo(s) movido(s).")
@@ -157,7 +157,7 @@ class OrganizadorGUI:
     def iniciar_monitoramento(self):
         path = self.entry_path.get()
         if not path:
-            messagebox.showwarning("⚠️ Atenção", "Selecione uma pasta primeiro!")
+            messagebox.showwarning("Atenção", "Selecione uma pasta primeiro!")
             return
 
         self.disable_buttons()
@@ -172,7 +172,7 @@ class OrganizadorGUI:
         self.observer = Observer()
         self.observer.schedule(event_handler, path, recursive=False)
         self.observer.start()
-        self.log(f"👀 Monitorando a pasta: {path}")
+        self.log(f"Monitorando a pasta: {path}")
 
     def parar_monitoramento(self):
         if self.observer:
@@ -181,7 +181,7 @@ class OrganizadorGUI:
             self.observer = None
             total_movidos = self.organizador.movidos if self.organizador else 0
             self.log(
-                f"🛑 Monitoramento parado. Total de arquivos movidos: {total_movidos}"
+                f"Monitoramento parado. Total de arquivos movidos: {total_movidos}"
             )
             messagebox.showinfo(
                 "Parado",
