@@ -30,13 +30,13 @@ Ele suporta:
 
 ## ⚙️ Instalação
 
-1️⃣ Clone o repositório:
+Clonar o repositório:
 
 ```bash
 git clone https://github.com/marques96/organizador_arquivos
 ```
 
-2️⃣ Criar o ambiente virtual e instalar dependências
+Criar o ambiente virtual e instalar dependências
 
 ```bash
 python -m venv venv
@@ -46,12 +46,12 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 ```
 
-3️⃣ Executar em modo manual
+Executar em modo manual
 ```bash
 python main.py -p "C:/Users/SeuUsuario/Downloads"
 ```
 
-4️⃣ Executar em modo monitoramento
+Executar em modo monitoramento
 ```bash
 python main.py -p "C:/Users/SeuUsuario/Downloads" -w
 ```
